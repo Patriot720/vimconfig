@@ -20,7 +20,7 @@ let ayucolor="mirage"   " for dark version of theme
 let NERDTreeShowHidden=1
 let g:ctrlp_map = '<c-p>'
 nnoremap <Leader>wa :VimwikiAll2HTML<CR>
-nnoremap <c-o> :CtrlPMRU<CR>
+nnoremap <leader>o :CtrlPMRU<CR>
 nnoremap <c-c> <Nop>
 let g:vimwiki_list = [{
   \ 'path': 'F:\YandexDisk\vimwiki',
@@ -32,7 +32,7 @@ set number
 let g:auto_save = 1  " enable AutoSave on Vim startup
 set renderoptions=type:directx
 set encoding=utf-8
-set guifont=Fira\ Code:h11
+set guifont=Fira\ Code:h10.3
 let g:NERDTreeWinPos = "left"
 :au VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
@@ -43,7 +43,13 @@ set splitbelow
 map <leader>k :silent exec "!git add ."<cr>:!git commit -m "
 map <leader>kk :silent exec "!git push origin master"<cr>
 map <leader>cm :!start cmd<cr>
-map <leader>cd :lcd %:p:h<cr>
+map <leader>cd :cd %:p:h<cr>
+map <leader>t :TestNearest<cr>
 let g:hardtime_default_on = 1
 let g:NERDTreeMapHelp = '<F1>'
 let g:hardtime_ignore_buffer_patterns = []
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_jump = 0
